@@ -6,25 +6,12 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
-export default function Header() {
+export default function Header({ headerNews }: { headerNews: React.ReactNode }) {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b">
-      <div className="bg-black text-white py-2 px-4">
-        <div className="max-w-7xl mx-auto flex items-center gap-4 overflow-x-auto scrollbar-hide">
-          <span className="text-sm font-bold whitespace-nowrap flex items-center gap-2">
-            <span className="bg-white text-black px-2 py-1 text-xs">LATEST</span>
-          </span>
-          <div className="flex items-center gap-6 text-sm">
-            <span className="whitespace-nowrap">His nudged jeepers ded sesulky oite ten around...</span>
-            <span className="text-gray-400">|</span>
-            <span className="whitespace-nowrap">Timmediately quail was inverse much so remade dimly...</span>
-            <span className="text-gray-400">|</span>
-            <span className="whitespace-nowrap">Unanimous haltered loud one trod trigly style four</span>
-          </div>
-        </div>
-      </div>
+      {headerNews}
 
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
